@@ -174,6 +174,15 @@ SOCIALACCOUNT_PROVIDERS = {
         'LOCALE_FUNC': 'path.to.callable',
         'VERIFIED_EMAIL': False,
         'VERSION': 'v7.0',
-    }
+    },
+
+    'facebook':
+        {
+            'SCOPE': ['email'],
+            'AUTH_PARAMS': {'auth_type': 'reauthenticate'},
+            'METHOD': 'oauth2',
+            'LOCALE_FUNC': lambda request: 'en_US'
+        }
+
 
 }
